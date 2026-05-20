@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Celebration!!!</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ローディング -->
+
+    <div id="loading">
+
+        <h1>LOADING...</h1>
+
+    </div>
+
+    <!-- TOP -->
+
+    <div class="hero">
+
+        <iframe
+            src="https://www.youtube.com/embed/QBDu6KjYVQ8?autoplay=1&mute=1&controls=0&loop=1&playlist=QBDu6KjYVQ8&playsinline=1&rel=0"
+            title="Background Video"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            allowfullscreen>
+        </iframe>
+
+        <div class="hero-content">
+
+            <h1>TO THE NEXT STAGE</h1>
+
+            <p class="hero-text">
+                県大会出場おめでとう!
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- MESSAGE -->
+
+    <section>
+
+        <h2 class="title">Message</h2>
+
+        <p class="message">
+            ここからが本当の勝負だ！<br>
+            緊張もすると思うけど<br>
+            やってきたことを信じて<br>
+            思い切りプレーしよう<br>
+            県大会でも最高のプレー期待してる！<br>
+            勉強も頑張ろう！笑
+        </p>
+
+    </section>
+
+    <!-- PHOTO -->
+
+    <section>
+
+        <h2 class="title">Soma's Gallery</h2>
+
+        <div class="slider-wrap">
+
+            <button class="slide-btn left"
+                onclick="slideLeft()">‹</button>
+
+            <div class="slider" id="slider">
+
+                <img src="photo1.jpg" alt=""
+                    onclick="openModal(this)">
+
+                <img src="photo2.jpg" alt=""
+                    onclick="openModal(this)">
+
+                <img src="photo3.jpg" alt=""
+                    onclick="openModal(this)">
+
+                <img src="photo4.jpg" alt=""
+                    onclick="openModal(this)">
+
+                <img src="photo5.jpg" alt=""
+                    onclick="openModal(this)">
+
+                <img src="photo6.jpg" alt=""
+                    onclick="openModal(this)">
+
+                <img src="photo7.jpg" alt=""
+                    onclick="openModal(this)">
+
+                <img src="photo8.jpg" alt=""
+                    onclick="openModal(this)">
+
+                <img src="photo9.jpg" alt=""
+                    onclick="openModal(this)">
+
+                <img src="photo10.jpg" alt=""
+                    onclick="openModal(this)">
+
+                <img src="photo11.jpg" alt=""
+                    onclick="openModal(this)">
+
+                <img src="photo12.jpg" alt=""
+                    onclick="openModal(this)">
+
+                <img src="photo13.jpg" alt=""
+                    onclick="openModal(this)">
+
+                <img src="photo14.jpg" alt=""
+                    onclick="openModal(this)">
+
+                <img src="photo15.jpg" alt=""
+                    onclick="openModal(this)">
+
+                <img src="photo16.jpg" alt=""
+                    onclick="openModal(this)">
+
+                <img src="photo17.jpg" alt=""
+                    onclick="openModal(this)">
+
+                <img src="photo18.jpg" alt=""
+                    onclick="openModal(this)">
+
+            </div>
+
+            <button class="slide-btn right"
+                onclick="slideRight()">›</button>
+
+        </div>
+
+    </section>
+
+    <!-- 拡大表示 -->
+
+    <div id="modal"
+        class="modal"
+        onclick="closeModal()">
+
+        <img id="modalImg">
+
+    </div>
+
+<!-- MOVIE -->
+
+<section>
+
+    <h2 class="title">HIGH LIGHT</h2>
+
+    <div class="movie">
+
+        <iframe
+    src="https://www.youtube.com/embed/L_11C6-bamo?autoplay=0&mute=0&controls=1&showinfo=0&rel=0&modestbranding=0"
+    title="YouTube video player"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+</iframe>
+
+    </div>
+
+</section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        &copy; 2026 TOYOTA HIGH SCHOOL
+        <br>
+        TENNIS TEAM
+
+    </footer>
+
+    <!-- JavaScript -->
+
+    <script>
+
+        // 拡大表示
+
+        function openModal(img) {
+
+            document.getElementById("modal").style.display = "flex";
+
+            document.getElementById("modalImg").src = img.src;
+
+        }
+
+        function closeModal() {
+
+            document.getElementById("modal").style.display = "none";
+
+        }
+
+        // スライド
+
+        const slider = document.getElementById("slider");
+
+        function slideLeft() {
+
+            slider.scrollBy({
+                left: -400,
+                behavior: "smooth"
+            });
+
+        }
+
+        function slideRight() {
+
+            slider.scrollBy({
+                left: 400,
+                behavior: "smooth"
+            });
+
+        }
+
+    </script>
+
+</body>
+
+</html>
